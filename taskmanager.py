@@ -225,7 +225,7 @@ class TaskList(object):
             return
 
         with open(self.path, 'r') as f:
-            for l in f.readlines():
+            for l in f:
                 try:
                     raw_dict = json.loads(l)
                     t = Task(
